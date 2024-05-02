@@ -16,5 +16,6 @@ abstract class AppAssets{
   static const String statistics="$imagePath/statistics.svg";
   static const String walletAccount="$imagePath/wallet_account.svg";
   static const String logout="$imagePath/logout.svg";
+  static const String arrowDown="$imagePath/arrow_down.svg";
   
 }

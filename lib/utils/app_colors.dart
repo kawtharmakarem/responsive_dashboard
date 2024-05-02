@@ -7,5 +7,7 @@ abstract class AppColors {
   static const Color kWhiteWithOpc = Colors.white; //todo
   static const Color kCard = Color(0xffFAFAFA);
   static const Color kGrey = Color(0xffAAAAAA);
+  static const Color kbackground=Color(0xffF7F9FA);
   static const Color kLightGrey = Color(0xffF1F1F1);
+  static Color kLightPrimary=kPrimary.withOpacity(0.8);
 }

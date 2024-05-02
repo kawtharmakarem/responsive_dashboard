@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:resposiveapp/models/drawer_item_model.dart';
-import 'package:resposiveapp/utils/app_colors.dart';
-import 'package:resposiveapp/utils/app_styles.dart';
 
 import 'active_drawer_item.dart';
 import 'inactive_drawer_item.dart';
