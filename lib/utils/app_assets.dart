@@ -17,5 +17,6 @@ abstract class AppAssets{
   static const String walletAccount="$imagePath/wallet_account.svg";
   static const String logout="$imagePath/logout.svg";
   static const String arrowDown="$imagePath/arrow_down.svg";
-  
+  static const String cardBackground="$imagePath/card_background.png";
+  static const String gallery="$imagePath/gallery.svg";
 }

@@ -26,11 +26,11 @@ class UnselectedExpensesItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensessItemHeader(image: allExpensesItemModel.image),
-          const SizedBox(height: 34,),
+          const SizedBox(height: 10,),
           Text(allExpensesItemModel.title,style: AppStyles.styleSemiBold16,),
-          const SizedBox(height: 8,),
+          const SizedBox(height: 5,),
           Text(allExpensesItemModel.date,style: AppStyles.styleRegular14,),
-          const SizedBox(height: 16,),
+          const SizedBox(height: 5,),
           Text(allExpensesItemModel.price,style: AppStyles.styleSemiBold24,)
     
         ],

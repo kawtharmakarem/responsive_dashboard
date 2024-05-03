@@ -31,21 +31,21 @@ class SelectedExpensesItem extends StatelessWidget {
             imageColor: Colors.white,
           ),
           const SizedBox(
-            height: 34,
+            height: 10,
           ),
           Text(
             allExpensesItemModel.title,
             style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
           ),
           const SizedBox(
-            height: 8,
+            height: 5,
           ),
           Text(
             allExpensesItemModel.date,
             style: AppStyles.styleRegular14.copyWith(color:const Color(0xffFAFAFA)),
           ),
           const SizedBox(
-            height: 16,
+            height: 5,
           ),
           Text(
             allExpensesItemModel.price,
