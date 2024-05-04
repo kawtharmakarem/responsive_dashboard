@@ -35,18 +35,18 @@ class _IcomeChartState extends State<IcomeChart> {
       sections: [
         PieChartSectionData(
           showTitle: false,
-          radius:activeIndex==0 ?60 : 50,
+          radius:activeIndex==0 ?50 : 40,
           value: 40,color: const Color(0xff208BC7)),
         PieChartSectionData(
-          radius:activeIndex==1 ? 60 : 50,
+          radius:activeIndex==1 ? 50 : 40,
           showTitle: false,
           value: 25,color: const Color(0xff4DB7F2)),
         PieChartSectionData(
-          radius:activeIndex==2 ? 60 : 50,
+          radius:activeIndex==2 ? 50 : 40,
           showTitle: false,
           value: 20,color:const Color(0xff064060) ),
         PieChartSectionData(
-          radius:activeIndex==3 ? 60 : 50,
+          radius:activeIndex==3 ? 50 : 40,
           showTitle: false,
           value: 22,color: const Color(0xffE2DECD))
       ]

@@ -12,12 +12,15 @@ static const items=[
 ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return TransactionItem(transactionModel: items[index]);
-      },
+    return Column(
+      children: items.map((transactionModel) => TransactionItem(transactionModel: transactionModel)).toList(),
     );
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   itemCount: items.length,
+    //   itemBuilder: (context, index) {
+    //     return TransactionItem(transactionModel: items[index]);
+    //   },
+    // );
   }
 }

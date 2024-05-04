@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:resposiveapp/models/income_details_item_model.dart';
 import 'package:resposiveapp/widgets/income_details_item.dart';
@@ -12,12 +14,17 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context,index){
-        return IncomeDetailsItem(incomeItemDetailsModel: items[index]);
-      },
+    log(MediaQuery.sizeOf(context).width.toString());
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: items.map((e) => IncomeDetailsItem(incomeItemDetailsModel: e)).toList(),
     );
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   itemCount: items.length,
+    //   itemBuilder: (context,index){
+    //     return IncomeDetailsItem(incomeItemDetailsModel: items[index]);
+    //   },
+    // );
   }
 }

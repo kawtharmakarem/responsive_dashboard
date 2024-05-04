@@ -22,7 +22,7 @@ class RangeOptions extends StatelessWidget {
         )),
         child: Row(
           children: [
-         const Text('Monthly',style: AppStyles.styleMedium16,),
+          Text('Monthly',style: AppStyles.styleMedium16(context),),
     
         const  SizedBox(width: 18,),
           SvgPicture.asset(AppAssets.arrowDown)

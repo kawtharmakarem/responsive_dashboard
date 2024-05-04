@@ -15,7 +15,10 @@ class TabletLayout extends StatelessWidget {
         SizedBox(width: 32,),
         Expanded(
           flex: 3,
-          child: MobileLayout()),
+          child: Padding(
+            padding: EdgeInsets.only(top: 40),
+            child: MobileLayout(),
+          )),
           SizedBox(width: 30,)
       ],
     );

@@ -5,6 +5,7 @@ import 'package:resposiveapp/widgets/custom_backgound_container.dart';
 import 'package:resposiveapp/widgets/income_chart.dart';
 import 'package:resposiveapp/widgets/income_details.dart';
 
+import 'income_section_body.dart';
 import 'income_section_header.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -15,13 +16,7 @@ class IncomeSection extends StatelessWidget {
     return const CustomBackgorundContainer(
       child: Column(children: [
         IncomeSectionHeader(),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(child: IcomeChart()),
-            Expanded(child: IncomeDetails())
-          ],
-        )
+        IncomeSectionBody()
       ],),
     );
   }

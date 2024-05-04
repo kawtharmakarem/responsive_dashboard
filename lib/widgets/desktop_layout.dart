@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:resposiveapp/widgets/allexpenses_quickinvoice_section.dart';
 import 'package:resposiveapp/widgets/custom_drawer.dart';
 import 'package:resposiveapp/widgets/income_section.dart';
@@ -17,18 +18,37 @@ class DesktopLayout extends StatelessWidget {
             width: 32,
           ),
           Expanded(
-              flex: 2,
-              child: AllExpensesAndQuickInvoiceSection()),
-              SizedBox(width: 5,),
-             Expanded(child: Column(
-               children: [
-                MyCardAndHistoryTransactionSection(),
-                SizedBox(height: 5,),
-                 Expanded(child: IncomeSection()),
-               ],
-             ))
+            flex: 3,
+            child:CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child:  Row(
+              children: [
+                Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 40),
+                      child: AllExpensesAndQuickInvoiceSection(),
+                    )),
+                    SizedBox(width: 5,),
+                   Expanded(child: Column(
+                     children: [
+                      MyCardAndHistoryTransactionSection(),
+                      SizedBox(height: 5,),
+                      Expanded(
+                        
+                        child: IncomeSection()),
+                     ],
+                   )),
+              ],
+            ),
+          )
         ],
       ),
+                )
+              ],
+            )
     );
   }
 }

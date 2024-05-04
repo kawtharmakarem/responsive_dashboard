@@ -9,6 +9,7 @@ class MyCardAndHistoryTransactionSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
+        SizedBox(height: 40,),
         MyCardSection(),
         Divider(height: 20,color: Color(0xffAAAAAA),),
         TransactionHistory()
