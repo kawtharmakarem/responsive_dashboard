@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:resposiveapp/utils/app_colors.dart';
 import 'package:resposiveapp/widgets/all_expenses_item_header.dart';
 
@@ -33,23 +35,32 @@ class SelectedExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyles.styleRegular14(context).copyWith(color:const Color(0xffFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular14(context).copyWith(color:const Color(0xffFAFAFA)),
+            ),
           ),
           const SizedBox(
             height: 10,
           ),
-          Text(
-            allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+            ),
           )
         ],
       ),

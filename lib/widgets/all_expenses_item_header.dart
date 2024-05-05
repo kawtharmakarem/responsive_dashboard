@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:math' as math;
 
@@ -14,19 +15,38 @@ class AllExpensessItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          height: 60,
-          width: 60,
-          padding:const EdgeInsets.all(14),
-          decoration: ShapeDecoration(
-              color:imageBgColor ?? const Color(0xFFFAFAFA),
-               shape:const OvalBorder()),
-           child: SvgPicture.asset(image,colorFilter: ColorFilter.mode(imageColor ??const Color(0xFF4EB7F2), BlendMode.srcIn)),
+        Flexible(
+          child:ConstrainedBox(
+            constraints:const BoxConstraints(
+            
+              maxWidth: 60
+            ),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                // height: 60,
+                // width: 60,
+                //padding:const EdgeInsets.all(14),
+                decoration: ShapeDecoration(
+                    color: imageBgColor ?? const Color(0xFFFAFAFA),
+                    shape: const OvalBorder()),
+                child: Center(
+                    child: SvgPicture.asset(image,
+                        colorFilter: ColorFilter.mode(
+                            imageColor ?? const Color(0xFF4EB7F2),
+                            BlendMode.srcIn))),
+              ),
+            ),
+          ),
         ),
         const Spacer(),
         Transform.rotate(
           angle: -math.pi / 2,
-          child: SvgPicture.asset(AppAssets.arrowDown,colorFilter: ColorFilter.mode(imageColor ?? AppColors.kPrimary, BlendMode.srcIn),),
+          child: SvgPicture.asset(
+            AppAssets.arrowDown,
+            colorFilter: ColorFilter.mode(
+                imageColor ?? AppColors.kPrimary, BlendMode.srcIn),
+          ),
         )
       ],
     );

@@ -37,7 +37,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
         children: items.asMap().entries.map((e) {
       int index = e.key;
       var item = e.value;
-      if (index == 1) {
+      
         return Expanded(
           child: GestureDetector(
             onTap: (){
@@ -46,7 +46,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
               });
             },
             child: Padding(
-            padding:const EdgeInsets.symmetric(horizontal: 12),
+            padding: EdgeInsets.symmetric(horizontal:index==1 ? 12:0),
             child: AllExpensesItem(
               allExpensesItemModel: item,
               isSelected: selectedIndex==index,
@@ -54,21 +54,8 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
           ),
           ),
         );
-      } else {
-        return Expanded(
-          child: GestureDetector(
-            onTap: (){
-              setState(() {
-                selectedIndex=index;
-              });
-            },
-            child: AllExpensesItem(
-            allExpensesItemModel: item,
-            isSelected: selectedIndex==index,
-          ),
-          ),
-        );
-      }
+      
+       
     }).toList());
   }
 }

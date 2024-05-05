@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:resposiveapp/utils/app_assets.dart';
 import 'package:resposiveapp/utils/app_colors.dart';
@@ -42,7 +43,7 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-          const SizedBox(height: 26,)
+         const Flexible(child: SizedBox(height: 26,))
 
           ],
         ),

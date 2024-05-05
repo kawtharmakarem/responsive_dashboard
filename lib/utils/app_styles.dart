@@ -166,7 +166,7 @@ double getScaleFactor(BuildContext context) {
   // var devicePixelRatio=dispatcher.views.first.devicePixelRatio;
   // double width=physicalWidth/devicePixelRatio;
   if(width<SizeConfig.tablet){
-    return width/550;
+    return width/600;
   }else if(width<SizeConfig.desktop){
     return width/1000;
 
